@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    height: 95vh;
+}
+.login{
+    padding: 20px;
+    margin: 5% auto;
+    text-align: center;
+}
+.login img{
+  height: 68px;
+  margin-bottom: 20px;
+}
+.login h3{
+    font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 4px;
+}
+.login p{
+    font-family: 'Inter', sans-serif;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7A7A7A;    
+    margin-bottom: 50px;
+    font-style: normal;
+    line-height: 22px;
+}
+.form-login{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.login label{
+    font-family: 'Inter', sans-serif;
+    text-align: start;
+    display: grid;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 10px;
+}
+.login input{
+    font-family: 'Inter', sans-serif;
+    margin-top: 10px;
+    display: flex;
+    width: 301px;
+    padding: 19px 25px;
+    gap: 10px;
+    background: #F1F1F1;
+    border-radius: 0.4rem;
+    border: none;
+    outline: #7A7A7A;
+    cursor: pointer;
+    margin-bottom: 45px;
+}
+.login a{
+text-decoration: none;
+}
+a .btn-login{
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+    width: 351px;
+    padding: 19px 25px;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    background-color: #1A5072;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    display: block;
+}
+
+.footer{
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #7A7A7A;
+    margin-bottom: 30px;
+    z-index: 10;
+    position: sticky;
+}
+
+
+/*Stying for small screens*/
+@media screen and (max-width: 500px){
+    .main{
+        height: 85vh;
+    }
+    .login{
+        margin: 20% auto;
+    }
+    .login input{
+        margin: 0 auto;
+        width: 62vw;
+        margin-bottom: 40px;
+    }
+    a .btn-login{
+        margin: 0 auto;
+        width: 73vw;
+    }
+
+    
+    .footer{
+        font-size: 15px;
+    }
+}
+
+
+/* voting page  */
+.vote{
+    text-align: center;
+    margin: 5% auto;
+    margin-bottom: 30px;
+}
+.vote h3{
+    font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  margin-bottom: 4px;
+}
+.vote p{
+    font-family: 'Inter', sans-serif;
+    text-transform: capitalize;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7A7A7A;    
+    margin-bottom: 50px;
+    font-style: normal;
+    line-height: 22px;
+}
+.vote img{
+    margin-bottom: 20px;
+}
+.vote-content{
+    display: block;
+}
+.vote-area{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.vote-ratio{
+    margin: 30px;
+}
+.vote-ratio label{
+   font-size: 20px;
+   font-weight: 800;
+   line-height: 27px;
+   font-family: 'Inter', sans-serif;
+}
+.vote_background{
+    margin-top: 20px;
+    align-items: flex-start;
+    padding: 30px 35px;
+    gap: 10px;
+    width: 294px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 20px; 
+}
+.candidate{
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    flex-wrap: wrap;
+    font-family: 'Inter', sans-serif;
+    line-height: 27px;
+    font-weight: 600;
+}
+
+.candidate_img{
+    padding: 20px ;
+    border-radius: 50%;
+    background: #F1F1F1;
+    max-height: 40px;
+    max-width: 40px;
+    display: inline-block
+}
+.underline::after{
+    content: '';
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(209,209,209,1) 50%, rgba(255,255,255,1) 100%);
+    display: block;
+    height: 1px;
+    margin: auto;
+   margin-top: 20px;
+    width: 85%;
+}
+.submit_button{
+    margin: 15% auto;
+    display: flex;
+    justify-content: center;
+}
+.btn-submit{
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    text-align: center;
+    width: 351px;
+    padding: 19px 25px;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    background-color: #1A5072;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 0.4rem;
+    display: block;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 500px){
+    .vote-ratio label{
+        font-size: 16px;
+     }
+     .vote_background{
+        width: 70vw;
+        
+    }
+}
+
+/* this is the successful page  */
+.successful{
+    height: 200px !important;
+    margin-top: 20px;
+
+}
+.success-p{
+    font-weight: 600 !important;
+    color: #000 !important;
+font-size: 18px !important;
+line-height: 22px;
+}
+@media screen and (max-width: 700px){
+    .successful{
+        margin-top: 90px;
+    
+    }
+}

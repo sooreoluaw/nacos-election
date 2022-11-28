@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login in</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{% static 'assets/svg/tC1LJobRFovQ9LlO7VTS 1.svg' %}"
+    />
+  </head>
+  <body>
+    <main class="main">
+      <!-- this is the login in page  -->
+      <section class="login">
+        <img src="{% static 'assets/svg/tC1LJobRFovQ9LlO7VTS 1.svg' %}" alt="NACOSS" />
+        <h3>NACOSS ELECTION</h3>
+        <p>enter the following details to continue.</p>
+
+        <!-- this is the form area  -->
+        <div class="form-login">
+          <form action="{% url 'vote:login' %}" method="post">
+            <label for="{{ form.matric.id }}">Security key</label>
+            <input type="{{ form.matric.type }}" name="{{ form.matric.name }}" id="{{ form.matric.id }}" placeholder="BU22CIT2022" />
+            {% csrf_token %}
+
+            <!-- this is the button but i'm not going to link it to aother page i will only style it -->
+            <a><button class="btn-login">Continue</button></a>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div class="footer">Copyright © 2022 NACOSS Electoral Committee</div>
+  </body>
+</html>

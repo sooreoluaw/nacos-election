@@ -1,0 +1,342 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vote</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="{% static 'assets/svg/tC1LJobRFovQ9LlO7VTS 1.svg' %}"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- this is the voting page  -->
+      <section class="vote">
+        <img src="{% static 'assets/svg/tC1LJobRFovQ9LlO7VTS 1.svg' %}" alt="NACOSS" />
+        <h3>NACOSS ELECTION</h3>
+        <p>Select your preferred candidate</p>
+      </section>
+
+      <!-- this is the voting area  -->
+
+      <section class="vote-content">
+        <div class="vote-area">
+          {% for poll in polls %}
+            <!-- vote-ratio is the  name of the class of the each position   -->
+            <div class="vote-ratio">
+              <label for="#">{{ poll.name }}</label>
+              <div class="vote_background">
+                {% for nominee in poll.nominees.all %}
+                  <div class="candidate underline">
+                    <input type="radio" name="poll_{{ poll.id }}" id="nominee_{{ nominee.id }}" value="{{ nominee.id }}" /> &nbsp;&nbsp;
+                    <label for="nominee_{{ nominee.id }}"><img src="{{ nominee.photo.url }}" class="candidate_img" alt="{{ nominee.name }}" /> &nbsp;&nbsp; {{ nominee.name }}</label>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          {% endfor %}
+          <!-- vote-ratio is the  name of the class of the each position   -->
+          <div class="vote-ratio">
+            <label for="#">NACOSS - PRESIDENT</label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#">NACOSS - VICE PRESIDENT</label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolade Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#"> NACOSS - GENERAL SECRETARY </label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#">NACOSS - ASST. GENERAL SECRETARY</label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#">NACOSS - PUBLIC RELATION OFFICER</label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#">NACOSS - FINANCIAL SECRETARY</label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#"> NACOSS - SPORTS DIRECTOR(MALE) </label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#">NACOSS - SPORTS DIRECTOR(FEMALE)</label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#">NACOSS - SOCIAL DIRECTOR(MALE)</label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#">NACOSS -SOFTWARE DIRECTOR 2</label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#">NACOSS -HARDWARE DIRECTOR 1</label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#">NACOSS -HARDWARE DIRECTOR 2</label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#">NACOSS -WELFARE DIRECTOR 1</label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#">NACOSS -WELFARE DIRECTOR 2</label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#">NACOSS - CHIEF WHIP </label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+
+          <div class="vote-ratio">
+            <label for="#">NACOSS - 300 Level Commissioner</label>
+            <div class="vote_background">
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Moyosooreoluwa Okeyode
+              </div>
+              <div class="candidate underline">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Tobiloba Oresegun
+              </div>
+              <div class="candidate">
+                <input type="checkbox" name="" id="" /> &nbsp;&nbsp;
+                <img src="" class="candidate_img" alt="" /> &nbsp;&nbsp; Kolawole Amosun
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- this is the button for the submit for the vote   -->
+        <div class="submit_button">
+          <button class="btn-submit">Submit Votes</button>
+        </div>
+      </section>
+    </main>
+    <div class="footer">Copyright © 2022 NACOSS Electoral Committee</div>
+  </body>
+</html>
